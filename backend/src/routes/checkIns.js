@@ -71,7 +71,7 @@ router.get('/:id', async ctx => {
 
 router.post('/', async ctx => {
   const data = ctx.request.body;
-  const { id, supply_status } = data;
+  const { supply_status } = data;
   const checkInId = await Database.insert('check_ins', data);
   
   if (data.schedule_id) {
